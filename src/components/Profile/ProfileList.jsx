@@ -8,7 +8,7 @@ export const ProfileList = ({ items }) => {
           username={item.username}
           tag={item.tag}
           location={item.location}
-          avatar={item.avatar}
+          // avatar={item.avatar}
           stats={item.stats}
         />
       ))}

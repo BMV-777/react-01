@@ -1,0 +1,28 @@
+.name {
+  color: black;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.tag {
+  color: grey;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.location {
+  color: grey;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.label {
+  color: grey;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.quantity {
+  font-size: 12px;
+  margin-top: 10px;
+}

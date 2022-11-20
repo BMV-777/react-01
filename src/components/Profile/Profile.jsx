@@ -1,9 +1,19 @@
 import PropTypes from 'prop-types';
-import defaultImages from '../../Default-avatar.jpg';
-import { Container, Card, Info, List, ListSpam } from './Profile.module';
+// import defaultImages from '../../Default-avatar.jpg';
+import Rita from '../../Rita.JPG';
+import {
+  Container,
+  Card,
+  Info,
+  List,
+  ListSpam,
+  Spam,
+  Img,
+} from './Profile.module';
+import '../../styled.css';
 
 export const Profile = ({
-  avatar = defaultImages,
+  avatar = Rita,
   username,
   location,
   tag,
@@ -13,23 +23,37 @@ export const Profile = ({
   return (
     <Container className="">
       <Card className="description">
-        <img src={avatar} alt="User avatar" class="avatar" width="120" />
-        <p className="name">{username}</p>
+        <Img
+          src={avatar}
+          alt="User avatar"
+          class="avatar"
+          width="110"
+          height="110"
+        />
+        <p className="name">
+          <b>{username}</b>
+        </p>
         <p className="tag">{tag}</p>
         <p className="location">{location}</p>
 
         <Info className="stats">
           <List>
             <ListSpam className="label">Followers</ListSpam>
-            <span className="quantity">{followers}</span>
+            <Spam className="quantity">
+              <b>{followers}</b>
+            </Spam>
           </List>
           <List>
             <ListSpam className="label">Views</ListSpam>
-            <span className="quantity"> {views}</span>
+            <Spam className="quantity">
+              <b>{views}</b>
+            </Spam>
           </List>
           <List>
             <ListSpam className="label">Likes</ListSpam>
-            <span className="quantity"> {likes}</span>
+            <Spam className="quantity">
+              <b>{likes}</b>
+            </Spam>
           </List>
         </Info>
       </Card>
